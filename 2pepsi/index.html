@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's what <br>
+                <span>I like</span>
+            </h2>
+            <p>Lorem, ipsum dolor sit amet consectetur 
+                adipisicing elit. Porro quo tenetur 
+                repudiandae autem facere, qui eaque 
+                ratione mollitia minus sapiente.</p>
+                 <a href="#">View All Products</a>
+            </div><!-- end of textBox -->
+            <div class="imgBox">
+                <img src="img/pepsi001.png" alt="pepsi" class="pepsi">
+            </div><!-- end of imgBox -->
+            <div class="txt">
+                <div class="text1">제목1입니다.</div>
+                <div class="text2">제목2입니다.</div>
+            </div><!-- end of txt -->
+            <ul class="thumb">
+                <li><img src="img/pepsi001.png" alt="pepsi"
+                    onclick="imgSlider('img/pepsi001.png');
+                    changeBg('img/bg1.jpg');
+                    changeText('제목1입니다.','제목2입니다');"
+                    ></li>
+                <li><img src="img/pepsi002.png" alt="pepsi"
+                    onclick="imgSlider('img/pepsi002.png');
+                    changeBg('img/bg2.jpg');
+                    changeText('제목2입니다.','제목2-1입니다');"></li>
+                <li><img src="img/pepsi003.png" alt="pepsi"
+                    onclick="imgSlider('img/pepsi003.png');
+                    changeBg('img/bg3.jpg');
+                    changeText('제목3입니다.','제목3-1입니다');"></li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        function imgSlider(anything){
+            document.querySelector('.pepsi').src=anything;
+        }
+
+        function changeBg(bg){
+            var sec = document.querySelector('.sec');
+            sec.style.backgroundImage='url(' + bg + ')';
+        }
+
+        function changeText(tx1, tx2){
+            var txt1 = document.querySelector('.txt .text1');
+            var txt2 = document.querySelector('.txt .text2');
+            txt1.innerHTML=tx1;//글자를 입력하는 명령문(기존글자 사라짐)
+            txt2.innerHTML=tx2;
+        }
+    </script>
+</body>
+</html>

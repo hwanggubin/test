@@ -1,0 +1,109 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sec{
+    position: relative;
+    height: 100vh;
+    background: url(img/bg1.jpg)no-repeat center;
+    background-size: cover;
+    padding: 100px;
+    transition: 0.5s;
+}
+.sec header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+}
+.sec header img{
+    width: 80px;
+}
+.sec .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec .content .textBox{
+    width: 600px;
+}
+.sec .content .textBox h2{
+    color: #fff;
+    font-size: 4em;/* 1em = 16px (em이라는것은 내가 가진 
+    폰트의 기본값이 1em 폰트 사이즈를 지정하지 않았기 때문에
+    기본값인 16px이 1em으로 계산되지만 
+    폰트사이즈를 지정하면 그 폰트사이트가 1em이 됌 */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.sec .content .textBox h2 span{
+    font-size: 2em;
+}
+.sec .content .textBox p{
+    color: #fff;
+}
+.sec .content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    color: #111;
+    padding: 8px 20px;
+    background: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sec .content .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px; 
+    padding-top: 50px;
+}
+.sec .content .imgBox .pepsi{
+    width: 260px;
+    transition: 0.3s;
+}
+
+.content .txt{
+    position: absolute;
+    right: 10%; bottom: 10%;
+
+}
+.content .txt .text1{
+    color: #fff; 
+    font-size: 80px; 
+    font-weight: bold; 
+}
+.content .txt .text2{
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.sec .content .thumb{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+.sec .content .thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    transform: translateY(0px);
+    transition: 0.5s;
+}
+.sec .content .thumb li:hover{
+    transform: translateY(-15px);
+}
+.sec .content .thumb img{
+    width: 40px;
+}
